@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
+import ErrorBoundary from '../components/ErrorBoundary';
 // import { robots } from './robots'; // {} destructure since not a default export
 import './App.css';
 import Scroll from '../components/Scroll';
@@ -39,7 +40,9 @@ class App extends Component {
 				<h1 className='f1'>RoboFriends</h1>
 					<SearchBox searchChange={this.onSearchChange}/>
 				<Scroll>
-					<CardList robots={filteredRobots}/> {/* {} used to assign property:value for JSX */}
+					<ErrorBoundary> 
+						<CardList robots={filteredRobots}/> {/* {} used to assign property:value for JSX */}
+					</ErrorBoundary>
 				</Scroll>
 			</div> // 4. App --> CardList
 			);
