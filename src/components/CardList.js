@@ -21,6 +21,3 @@ const CardList = ({ robots }) => {
 }
 
 export default CardList;
-
-// key prop should have something that doesn't change. For example, index could change if array items
-// get moved. So a better key in this case would be something unique like id.

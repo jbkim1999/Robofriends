@@ -7,7 +7,7 @@ const SearchBox = ({ searchChange }) => {
 		className = 'pa3 ba b--green bg-lightest-blue'
 		type='search' 
 		placeholder='search robots'
-		onChange = {searchChange}// 1. when something is typed, call searchChange function
+		onChange = {searchChange}// When something is typed, call searchChange function
 		/>
 	</div>
 	);
